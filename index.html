@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="assets/logo.png">
+    <title>Clock</title>
+</head>
+
+<body>
+    <audio id="start-in-one-minute" src="assets/start-in-one-minute.mp3" preload="auto"></audio>
+    <audio id="exam-started" src="assets/exam-started.mp3" preload="auto"></audio>
+    <audio id="one-minute-remaining" src="assets/one-minute-remaining.mp3" preload="auto"></audio>
+    <audio id="exam-ended" src="assets/exam-ended.mp3" preload="auto"></audio>
+    <div class="clock">
+        <div class="header">
+            <div class="course">
+                <div class="top-course">
+                    <h1 id="course-name">Course Name</h1>
+                </div>
+                <div class="top-room">
+                    <h2 id="room-name">Room Name</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="times">
+            <div class="start">
+                <h3>Start</h3>
+                <h2 id="start-time">00:00</h2>
+            </div>
+            <div class="end">
+                <h3>End</h3>
+                <h2 id="end-time">00:00</h2>
+            </div>
+        </div>
+        <div class="current-info">
+            <div class="info">
+                <h2 id="info1"></h2>
+            </div>
+            <div class="current">
+                <h3>Current Time</h3>
+                <h2 id="current-time">00:00:00</h2>
+            </div>
+            <div class="info">
+                <h2 id="info2"></h2>
+            </div>
+        </div>
+    </div>
+    <div class="setup">
+        <h1>Setup</h1>
+        <label for="course-name-input">Course Name:</label>
+        <input type="text" id="course-name-input" placeholder="Course Name" required />
+
+        <label for="room-name-input">Room Name:</label>
+        <input type="text" id="room-name-input" placeholder="Room Name" required />
+
+        <label for="start-time-input">Start Time:</label>
+        <input type="time" id="start-time-input" required />
+
+        <label for="end-time-input">End Time:</label>
+        <input type="time" id="end-time-input" required />
+
+        <div class="input-buttons">
+            <button type="button" onclick="requestFullScreen()">Full Screen</button>
+            <button type="button" style="background-color: red;" onclick="resetElements()">Reset Inputs</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
