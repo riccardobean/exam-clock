@@ -1,2 +1,2 @@
-# exam-clock
+# Exam Clock
 A clock designed for exams
