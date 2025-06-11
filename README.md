@@ -1,4 +1,3 @@
-# Exam Clock
 # 🕒 Exam Clock
 Exam Clock is a fullscreen, distraction-free digital timer interface designed specifically for exam environments. It visually displays the current time, exam start and end times, room and course information, and delivers audio alerts at critical moments.
 
