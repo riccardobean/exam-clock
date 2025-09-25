@@ -16,8 +16,11 @@ Exam Clock is a fullscreen, distraction-free digital timer interface designed sp
 
 ## 📁 File Structure
 index.html – Core layout
+
 style.css – Custom styling and layout
+
 script.js – Clock logic and event triggers
+
 assets/ – Contains audio alerts and optional favicon/logo
 
 ## 🚀 How to Use
