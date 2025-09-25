@@ -21,7 +21,7 @@ script.js – Clock logic and event triggers
 assets/ – Contains audio alerts and optional favicon/logo
 
 ## 🚀 How to Use
-1. Open index.html in a browser.
+1. Open [link](https://riccardobean.github.io/exam-clock/) in a browser.
 2. Fill in:
    - Course name
    - Room name
