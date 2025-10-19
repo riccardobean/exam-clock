@@ -4,15 +4,16 @@ Exam Clock is a fullscreen, distraction-free digital timer interface designed sp
 ## 🎯 Features
  - ⏰ Real-time display of current, start, and end times
  - 🔊 Automatic audio cues:
- -   “Starting in one minute”
- -   “Exam started”
- -   “One minute remaining”
- -   “Exam ended”
+   -   “Starting in one minute”
+   -   “Exam started”
+   -   “One minute remaining”
+   -   “Exam ended”
  - 🧾 Dynamic labels for course and room info
  - 🧪 Clean interface for exam invigilators and classrooms
  - 🖥️ Fullscreen mode toggle
  - 🧼 Input reset functionality
  - 🎯 Context-menu disabled and cursor hidden for exam use
+ - 💤 Prevent the device from sleeping while in fullscreen mode
 
 ## 📁 File Structure
 index.html – Core layout
