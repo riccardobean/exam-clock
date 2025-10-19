@@ -166,9 +166,52 @@ document.addEventListener("contextmenu", (e) => { e.preventDefault() });
 document.addEventListener('dblclick', (e) => {
     e.preventDefault();
     if (document.fullscreenElement == null) {
-        requestFullscreen()
+        requestFullScreen()
     }
     else {
         document.exitFullscreen();
+    }
+});
+
+let wakeLock = null;
+
+async function requestWakeLock() {
+    try {
+        if ('wakeLock' in navigator && !wakeLock) {
+            wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Wake lock active');
+
+            // Reacquire if the system temporarily releases it
+            wakeLock.addEventListener('release', () => {
+                console.log('Wake lock released');
+                wakeLock = null;
+            });
+        }
+    } catch (err) {
+        console.warn('Wake lock request failed:', err);
+    }
+}
+
+async function releaseWakeLock() {
+    if (wakeLock) {
+        await wakeLock.release();
+        wakeLock = null;
+        console.log('Wake lock manually released');
+    }
+}
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && document.fullscreenElement) {
+        requestWakeLock();
+    } else {
+        releaseWakeLock();
+    }
+});
+
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+        requestWakeLock();
+    } else {
+        releaseWakeLock();
     }
 });
